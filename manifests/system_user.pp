@@ -1,7 +1,7 @@
 define rvm::system_user () {
   include rvm::params
 
-  ensure_resource('user', $name, {'ensure' => 'present' })
+  ensure_resource('user', $name, {})
   include rvm::group
 
   exec { "rvm-system-user-${name}":
